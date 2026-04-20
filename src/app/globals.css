@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Professional mode (default) */
+:root {
+  --background: #f8f8f6;
+  --surface: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #6b6b6b;
+  --accent: #1a1a1a;
+  --border: rgba(0, 0, 0, 0.08);
+}
+
+/* Personal mode */
+[data-mode="personal"] {
+  --background: #131312;
+  --surface: #1c1c1a;
+  --text-primary: #ede9e3;
+  --text-secondary: #8a8478;
+  --accent: #c9a96e;
+  --border: rgba(255, 255, 255, 0.07);
+}
+
+html {
+  background-color: var(--background);
+  color: var(--text-primary);
+  scroll-behavior: smooth;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+*,
+*::before,
+*::after {
+  transition-property: background-color, color, border-color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+}
