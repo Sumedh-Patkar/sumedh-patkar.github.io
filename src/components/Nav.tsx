@@ -10,7 +10,7 @@ export default function Nav() {
   const links = mode === 'professional' ? professionalLinks : personalLinks
 
   return (
-    <nav className="flex gap-8">
+    <nav className="hidden md:flex gap-8">
       {links.map((link) => (
         <a
           key={link}

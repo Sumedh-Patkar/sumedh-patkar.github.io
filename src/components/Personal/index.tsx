@@ -33,22 +33,22 @@ const iconLinkStyle: React.CSSProperties = { color: 'var(--text-secondary)', dis
 
 export default function Personal() {
   return (
-    <div className="max-w-4xl mx-auto px-8">
+    <div className="max-w-4xl mx-auto px-4 md:px-8">
 
       {/* Hero */}
-      <section className="pt-32 pb-24">
+      <section className="pt-24 pb-16 md:pt-32 md:pb-24">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
         >
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '3rem' }}>
+          <div className="flex flex-col-reverse md:flex-row md:justify-between items-center md:items-start gap-8 md:gap-12">
             {/* Left: text */}
-            <div style={{ flex: 1 }}>
+            <div className="flex-1 w-full">
               <span style={{ fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--accent)', display: 'block', marginBottom: '1.5rem' }}>
                 Beyond the code
               </span>
-              <h1 className="font-bold tracking-tight leading-none mb-6" style={{ fontSize: '4.5rem', color: 'var(--text-primary)' }}>
+              <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-none mb-6" style={{ color: 'var(--text-primary)' }}>
                 Hi, I'm<br />Sumedh
               </h1>
               <p className="text-lg mb-8" style={{ color: 'var(--text-secondary)', maxWidth: '360px' }}>
@@ -66,14 +66,14 @@ export default function Personal() {
             <img
               src="/avatar.jpg"
               alt="Sumedh Patkar"
-              style={{ width: '148px', height: '148px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0, marginTop: '0.5rem' }}
+              className="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover flex-shrink-0 md:mt-2"
             />
           </div>
         </motion.div>
       </section>
 
       {/* Blog */}
-      <section id="blog" className="py-24" style={divider}>
+      <section id="blog" className="py-16 md:py-24" style={divider}>
         <motion.div {...fadeUp}>
           <span style={labelStyle}>Blog</span>
           <p style={{ color: 'var(--text-secondary)' }}>Coming soon.</p>
@@ -81,7 +81,7 @@ export default function Personal() {
       </section>
 
       {/* Music */}
-      <section id="music" className="py-24" style={divider}>
+      <section id="music" className="py-16 md:py-24" style={divider}>
         <motion.div {...fadeUp}>
           <span style={labelStyle}>Music</span>
           <p style={{ color: 'var(--text-secondary)' }}>Coming soon.</p>
@@ -89,7 +89,7 @@ export default function Personal() {
       </section>
 
       {/* Interests */}
-      <section id="interests" className="py-24" style={divider}>
+      <section id="interests" className="py-16 md:py-24" style={divider}>
         <motion.div {...fadeUp}>
           <span style={labelStyle}>Interests</span>
           <p style={{ color: 'var(--text-secondary)' }}>Coming soon.</p>

@@ -202,22 +202,22 @@ function iconLinkStyle(base: React.CSSProperties = {}): React.CSSProperties {
 
 export default function Professional() {
   return (
-    <div className="max-w-4xl mx-auto px-8">
+    <div className="max-w-4xl mx-auto px-4 md:px-8">
 
       {/* Hero */}
-      <section className="pt-32 pb-24">
+      <section className="pt-24 pb-16 md:pt-32 md:pb-24">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
         >
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '3rem' }}>
+          <div className="flex flex-col-reverse md:flex-row md:justify-between items-center md:items-start gap-8 md:gap-12">
             {/* Left: text */}
-            <div style={{ flex: 1 }}>
+            <div className="flex-1 w-full">
               <span style={{ fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--text-secondary)', display: 'block', marginBottom: '1.5rem' }}>
                 Software Engineer
               </span>
-              <h1 className="font-bold tracking-tight leading-none mb-6" style={{ fontSize: '4.5rem', color: 'var(--text-primary)' }}>
+              <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-none mb-6" style={{ color: 'var(--text-primary)' }}>
                 Sumedh<br />Patkar
               </h1>
               <p className="text-lg mb-8" style={{ color: 'var(--text-secondary)', maxWidth: '360px' }}>
@@ -253,20 +253,20 @@ export default function Professional() {
             <img
               src="/avatar.jpg"
               alt="Sumedh Patkar"
-              style={{ width: '148px', height: '148px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0, marginTop: '0.5rem' }}
+              className="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover flex-shrink-0 md:mt-2"
             />
           </div>
         </motion.div>
       </section>
 
       {/* Experience */}
-      <section id="experience" className="py-24" style={divider}>
+      <section id="experience" className="py-16 md:py-24" style={divider}>
         <motion.div {...fadeUp}>
           <span style={labelStyle}>Experience</span>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
             {experience.map(exp => (
               <div key={exp.company}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.2rem' }}>
+                <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-1 gap-1">
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
                     {logoMap[exp.company]}
                     <span className="font-semibold" style={{ color: 'var(--text-primary)' }}>{exp.company}</span>
@@ -284,7 +284,7 @@ export default function Professional() {
       </section>
 
       {/* Projects */}
-      <section id="projects" className="py-24" style={divider}>
+      <section id="projects" className="py-16 md:py-24" style={divider}>
         <motion.div {...fadeUp}>
           <span style={labelStyle}>Projects</span>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
@@ -321,12 +321,12 @@ export default function Professional() {
       </section>
 
       {/* Skills */}
-      <section id="skills" className="py-24" style={divider}>
+      <section id="skills" className="py-16 md:py-24" style={divider}>
         <motion.div {...fadeUp}>
           <span style={labelStyle}>Skills</span>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             {skills.map(group => (
-              <div key={group.category} style={{ display: 'grid', gridTemplateColumns: '110px 1fr', gap: '1rem', alignItems: 'start' }}>
+              <div key={group.category} className="flex flex-col md:grid md:items-start gap-2 md:gap-4" style={{ gridTemplateColumns: '110px 1fr' }}>
                 <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', paddingTop: '0.2rem' }}>{group.category}</span>
                 <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap' }}>
                   {group.items.map(item => (
@@ -342,7 +342,7 @@ export default function Professional() {
       </section>
 
       {/* Talks */}
-      <section id="talks" className="py-24" style={divider}>
+      <section id="talks" className="py-16 md:py-24" style={divider}>
         <motion.div {...fadeUp}>
           <span style={labelStyle}>Talks</span>
           {talks.map(talk => (
@@ -358,7 +358,7 @@ export default function Professional() {
       </section>
 
       {/* Education */}
-      <section id="education" className="py-24" style={divider}>
+      <section id="education" className="py-16 md:py-24" style={divider}>
         <motion.div {...fadeUp}>
           <span style={labelStyle}>Education</span>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
@@ -378,7 +378,7 @@ export default function Professional() {
       </section>
 
       {/* Resume */}
-      <section id="resume" className="py-24" style={divider}>
+      <section id="resume" className="py-16 md:py-24" style={divider}>
         <motion.div {...fadeUp}>
           <span style={labelStyle}>Resume</span>
           <a
