@@ -215,7 +215,7 @@ export default function Professional() {
             {/* Left: text */}
             <div className="flex-1 w-full">
               <span style={{ fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--text-secondary)', display: 'block', marginBottom: '1.5rem' }}>
-                Software Engineer
+                Jr. Software Architect
               </span>
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-none mb-6" style={{ color: 'var(--text-primary)' }}>
                 Sumedh<br />Patkar
